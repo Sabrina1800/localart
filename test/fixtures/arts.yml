@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contributor: MyText
+  coverage: MyString
+  creator: MyString
+  date: 1
+  description: MyText
+  format: MyString
+  identifier: MyText
+  related: MyString
+  rights: MyString
+  subject: MyText
+  title: MyString
+  type: 
+  image: MyString
+
+two:
+  contributor: MyText
+  coverage: MyString
+  creator: MyString
+  date: 1
+  description: MyText
+  format: MyString
+  identifier: MyText
+  related: MyString
+  rights: MyString
+  subject: MyText
+  title: MyString
+  type: 
+  image: MyString

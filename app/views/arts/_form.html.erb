@@ -1,0 +1,82 @@
+<%= form_with(model: art, local: true) do |form| %>
+  <% if art.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(art.errors.count, "error") %> prohibited this art from being saved:</h2>
+
+      <ul>
+      <% art.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :contributor %>
+    <%= form.text_area :contributor, id: :art_contributor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coverage %>
+    <%= form.text_field :coverage, id: :art_coverage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :creator %>
+    <%= form.text_field :creator, id: :art_creator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.number_field :date, id: :art_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :art_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :format %>
+    <%= form.text_field :format, id: :art_format %>
+  </div>
+
+  <div class="field">
+    <%= form.label :identifier %>
+    <%= form.text_area :identifier, id: :art_identifier %>
+  </div>
+
+  <div class="field">
+    <%= form.label :related %>
+    <%= form.text_field :related, id: :art_related %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rights %>
+    <%= form.text_field :rights, id: :art_rights %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_area :subject, id: :art_subject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :art_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :art_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :art_image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

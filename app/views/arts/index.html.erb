@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Arts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contributor</th>
+      <th>Coverage</th>
+      <th>Creator</th>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Format</th>
+      <th>Identifier</th>
+      <th>Related</th>
+      <th>Rights</th>
+      <th>Subject</th>
+      <th>Title</th>
+      <th>Type</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arts.each do |art| %>
+      <tr>
+        <td><%= art.contributor %></td>
+        <td><%= art.coverage %></td>
+        <td><%= art.creator %></td>
+        <td><%= art.date %></td>
+        <td><%= art.description %></td>
+        <td><%= art.format %></td>
+        <td><%= art.identifier %></td>
+        <td><%= art.related %></td>
+        <td><%= art.rights %></td>
+        <td><%= art.subject %></td>
+        <td><%= art.title %></td>
+        <td><%= art.type %></td>
+        <td><%= art.image %></td>
+        <td><%= link_to 'Show', art %></td>
+        <td><%= link_to 'Edit', edit_art_path(art) %></td>
+        <td><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Art', new_art_path %>
